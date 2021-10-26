@@ -1,0 +1,9 @@
+<h2>Kittens of Asgard</h2>
+
+<ul>
+  <% @kittens.each do |kitten| %>
+    <li><%= link_to kitten.name, kitten %> <%= button_to 'Delete', kitten_path(kitten), method: :delete %><br></li>
+  <% end %>
+</ul>
+
+<%= button_to "New kitten", new_kitten_path, method: :get %>

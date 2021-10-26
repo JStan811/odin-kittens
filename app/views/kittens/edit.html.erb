@@ -1,0 +1,7 @@
+<h2>Edit <%= @kitten.name %></h2>
+
+<%= render "form", kitten: @kitten %>
+<br>
+<%= button_to 'Delete', kitten_path(@kitten), method: :delete %>
+<br>
+<%= button_to 'Back', kitten_path(@kitten), method: :get %>

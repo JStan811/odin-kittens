@@ -1,0 +1,12 @@
+<h2><%= @kitten.name %></h2>
+
+<% flash.each do |name, msg| -%>
+  <%= content_tag :div, msg, class: name %>
+<% end -%>
+
+<p>Age: <%= @kitten.age %>, Cuteness: <%= @kitten.cuteness %>, Softness: <%= @kitten.softness %></p>
+
+<%= button_to 'Edit', edit_kitten_path, method: :get %>
+<%= button_to 'Delete', kitten_path(@kitten), method: :delete %>
+<br>
+<%= button_to 'Home', kittens_path, method: :get %>
